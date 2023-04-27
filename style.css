@@ -1,0 +1,92 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+}
+header{
+    background-color:#2e64a1;
+}
+.container-header{
+    width:100vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+h1{
+    font-size:2.5;
+    font-style:italic;
+    font-weight:100;
+    color:white;
+}
+.container-ima-h1{
+    display:flex;
+    width:70vw;
+    justify-content:flex-start;
+    align-items:center;
+    padding:1rem;
+    padding-left:5rem;
+}
+a{
+    padding:0px;
+    min-width:10vw;
+}
+.img-header{
+    max-height:20vh;
+}
+nav{
+    display:flex;
+    justify-content:space-evenly;
+    width:60vw;
+}
+.container-nav{
+    background-color:#6da9ed;
+    display:flex;
+    justify-content:center;
+    width:100%;
+}
+.link-nav{
+    color:white;
+    text-decoration:none;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+.link-nav:hover{
+    background-color:rgba(0,0,0,0.3);
+}
+.container-main{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.img-ala-main{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    margin-top:1rem;
+    align-items:center;
+    width:20vw;
+}
+.ala-img{
+    width:50vw;
+    height:45vh;
+}
+.container-h2-p{
+    width:60vw;
+}
+.container-lorem{
+    display:flex;
+    justify-content:space-between;
+    width:50;
+}
+.container-bienvenidos-p{
+    width:30vw;
+}
+.container-testimonios-p{
+    width:20vw;
+}
+p{
+    margin-bottom:1rem;
+}
