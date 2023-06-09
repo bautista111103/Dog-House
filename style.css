@@ -22,6 +22,7 @@ h1{
     font-style:italic !important;
     font-weight:100 !important;
     color:black !important;
+    text-align:center;
 }
 .container-ima-h1{
     display:flex;
@@ -102,12 +103,16 @@ p{
 }
 .container-nosotros{
     display:flex;
+    align-items:center;
     flex-direction:column;
     padding:1rem;
 }
+.p-historia{
+    width:80vw;
+}
 .staff{
     display:flex !important;
-    width:100%;
+    width:80vw;
     justify-content:space-around !important;
     flex-wrap:wrap;
 }
@@ -155,9 +160,24 @@ p{
     width:50vw;
     height:100%;
 }
+.container-novedades{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+.novedad-1{
+    width:80vw;
+}
+.novedad-2{
+    width:80vw;
+}
+.novedad-3{
+    width:80vw;
+}
 .fotos-g{
     margin:1rem;
-    width:15vw;
+    width:20vw;
+    height:20vh;
 }
 .footer {
     height: 10.3vh;
