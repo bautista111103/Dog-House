@@ -133,6 +133,12 @@ p{
     width:100%;
     flex-wrap:wrap;
 }
+.div-img-galeria{
+    display:flex;
+    height:20vh;
+    width:20vw;
+    margin:2rem;
+}
 .galeria{
     display:flex;
     justify-content:center;
