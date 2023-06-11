@@ -185,6 +185,28 @@ p{
     width:20vw;
     height:20vh;
 }
+.container-mensaje-form{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background-color:black;
+}
+.h1-form{
+    color:yellow !important;
+}
+.boton-mensaje-form{
+    width:20vw;
+    height:10vh;
+    background-color:yellow;
+}
+.a-form{
+    text-size-adjust:80px;
+    text-decoration:none;
+    color:black;
+    font-size:50px;
+}
 .footer {
     height: 10.3vh;
     width: 100%;
