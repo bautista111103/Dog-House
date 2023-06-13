@@ -1,68 +1,102 @@
 const productos = [
     {
-        nombre:"",
-        precio:"",
-        stock:"",
-        imagen:"https://as01.epimg.net/diarioas/imagenes/2021/07/21/actualidad/1626850303_934147_1626850623_noticia_normal_recorte1.jpg"
+        nombre: "ACANA",
+        precio: "$5.340",
+        stock: 3,
+        imagen: "https://static.zoomalia.com/prod_img/68481/sm_1675878a7ab84fb43402106c575658472fa1574867062.jpg"
     },
     {
-        nombre:"",
-        precio:"",
-        stock:"",
-        imagen:"https://estaticos-cdn.prensaiberica.es/clip/09973657-0b48-4488-9288-3c98cb3e7e77_16-9-aspect-ratio_default_0.jpg"
+        nombre: "ROYAL CANIN",
+        precio: "$3.299",
+        stock: 0,
+        imagen: "https://static.zoomalia.com/prod_img/36666/sm_264d6baf65e0b240ce177cf70da146c8dc81575451713.jpg"
     },
     {
-        nombre:"",
-        precio:"",
-        stock:"",
-        imagen:"https://www.respetmascotas.com/_Assets/img/190110-Imagen-LaImportanciaDeSacarATuPerroTresVecesAlDia.jpg"
+        nombre: "ADULT DINNER",
+        precio: "$4.487",
+        stock: 1,
+        imagen: "https://static.zoomalia.com/prod_img/17123/sm_8877ce3284b743aefde80ffd9aec500e0851592226397.jpg"
     },
     {
-        nombre:"",
-        precio:"",
-        stock:"",
-        imagen:"https://soyunperro.com/wp-content/uploads/2020/11/perro-paseando-por-el-campo.jpg"
+        nombre: "Pelota de goma multicolor",
+        precio: "$1.359",
+        stock: 0,
+        imagen: "https://static.zoomalia.com/prod_img/103029/sm_986fe7ee8fc1959cc7214fa21c4840dff0a1632901789.jpg"
     },
     {
-        nombre:"",
-        precio:"",
-        stock:"",
-        imagen:"https://t1.ea.ltmcdn.com/es/posts/5/6/2/10_caracteristicas_de_los_perros_24265_600_square.jpg"
+        nombre: "Pelota para perros con sonido Zolia Woopy Ball",
+        precio: "$2.799",
+        stock: 14,
+        imagen: "https://static.zoomalia.com/prod_img/41664/sm_2638c19f571e251e61cb8dd3612f26d5ecf1531488487.jpg"
     },
     {
-        nombre:"",
-        precio:"",
-        stock:"",
-        imagen:"https://hips.hearstapps.com/hmg-prod/images/raza-perro-alaskan-klee-kai-646c693637acc.jpeg"
+        nombre: "Hueso de caucho muy resistente",
+        precio: "$1.999",
+        stock: 5,
+        imagen: "https://static.zoomalia.com/prod_img/67506/sm_450f5f8590cd58a54e94377e6ae2eded4d91571137645.jpg"
     },
     {
-        nombre:"",
-        precio:"",
-        stock:"",
-        imagen:"https://images.hola.com/imagenes/mascotas/20220602210922/razas-perro-con-mas-olor-corporal-dn/1-95-776/razas-perro-motivos-olor-corporal-m.jpg?tx=w_680"
+        nombre: "Abrigo impermeable y transpirable",
+        precio: "$8.789",
+        stock: 10,
+        imagen: "https://static.zoomalia.com/prod_img/73443/sm_4130deb1c54814305ca9ad266f53bc825111587548642.jpg"
     },
     {
-        nombre:"",
-        precio:"",
-        stock:"",
-        imagen:"https://www.eltiempo.com/files/image_640_428/uploads/2021/03/25/605d32e3c7411.jpeg"
+        nombre: "Abrigo aislante rojo",
+        precio: "$5.699",
+        stock: 0,
+        imagen: "https://static.zoomalia.com/prod_img/72367/sm_77386b122d4358357d834a87ce618a55de01639061532.jpg"
     },
     {
-        nombre:"",
-        precio:"",
-        stock:"",
-        imagen:"https://cdn.onemars.net/sites/nutro_es_NkyIN_B9cV/image/200_1615974073876.jpeg"
+        nombre: "Botas de proteccion",
+        precio: "$3.900",
+        stock: 3,
+        imagen: "https://static.zoomalia.com/prod_img/123967/sm_14847d1e990583c9c67424d369f3414728e1656344134.jpg"
     },
     {
-        nombre:"",
-        precio:"",
-        stock:"",
-        imagen:"https://images.hola.com/imagenes/mascotas/20211129200495/perros-inquietos-causas/1-25-713/perro-activo-t.jpg?tx=w_680"
+        nombre: "",
+        precio: "",
+        stock: "",
+        imagen: "https://images.hola.com/imagenes/mascotas/20211129200495/perros-inquietos-causas/1-25-713/perro-activo-t.jpg?tx=w_680"
     },
     {
-        nombre:"",
-        precio:"",
-        stock:"",
-        imagen:"https://i0.wp.com/blog.mascotaysalud.com/wp-content/uploads/2020/06/Corgi-Gales-de-Cardigan-paseando.jpg?fit=865%2C540&ssl=1"
+        nombre: "",
+        precio: "",
+        stock: "",
+        imagen: "https://i0.wp.com/blog.mascotaysalud.com/wp-content/uploads/2020/06/Corgi-Gales-de-Cardigan-paseando.jpg?fit=865%2C540&ssl=1"
     }
 ] 
+
+function imprimirCartas(productos){  
+    var templateHtml = "";
+    if(productos.stock >= 1){
+        productos.map(item =>{
+                templateHtml += `
+                    <div class="card" style="width: 20rem; margin: 1rem">
+                        <img src=${item.imagen}>
+                        <div class="card-body">
+                            <h4 class="card-title">${item.nombre}</h5>
+                            <h5 class="card-text">${item.precio}</h2>
+                        </div>
+                    </div>
+             ` ;
+             document.querySelector('#card-tienda').innerHTML = templateHtml
+        })
+    }
+    else{
+        productos.map(item =>{
+                templateHtml += `
+                    <div class="card" style="width: 20rem; margin: 1rem">
+                        <img src=${item.imagen}>
+                        <h3 class="h3-tienda">Stock agotado</h3>
+                        <div class="card-body">
+                            <h4 class="card-title">${item.nombre}</h5>
+                            <h5 class="card-text">${item.precio}</h2>
+                        </div>
+                    </div>
+             ` ; 
+             document.querySelector('#card-tienda').innerHTML = templateHtml
+        })
+    }
+}
+imprimirCartas(productos)
