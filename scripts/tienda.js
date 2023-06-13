@@ -68,9 +68,15 @@ const productos = [
 ] 
 
 function imprimirCartas(productos){  
+    var stocks = productos.filter((items)=>{
+        return items.stock 
+        // console.log(items.stock);
+    })
     var templateHtml = "";
-    if(productos.stock >= 1){
-        productos.map(item =>{
+    if(stocks.stock >= 1){
+        console.log(stocks.stock);
+        stocks.forEach(item =>{
+           
                 templateHtml += `
                     <div class="card" style="width: 20rem; margin: 1rem">
                         <img src=${item.imagen}>
@@ -79,12 +85,13 @@ function imprimirCartas(productos){
                             <h5 class="card-text">${item.precio}</h2>
                         </div>
                     </div>
-             ` ;
+             ` ;  
+             
              document.querySelector('#card-tienda').innerHTML = templateHtml
         })
     }
     else{
-        productos.map(item =>{
+        stocks.map(item =>{
                 templateHtml += `
                     <div class="card" style="width: 20rem; margin: 1rem">
                         <img src=${item.imagen}>
