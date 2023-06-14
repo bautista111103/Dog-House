@@ -52,58 +52,25 @@ const productos = [
         precio: "$3.900",
         stock: 3,
         imagen: "https://static.zoomalia.com/prod_img/123967/sm_14847d1e990583c9c67424d369f3414728e1656344134.jpg"
-    },
-    {
-        nombre: "",
-        precio: "",
-        stock: "",
-        imagen: "https://images.hola.com/imagenes/mascotas/20211129200495/perros-inquietos-causas/1-25-713/perro-activo-t.jpg?tx=w_680"
-    },
-    {
-        nombre: "",
-        precio: "",
-        stock: "",
-        imagen: "https://i0.wp.com/blog.mascotaysalud.com/wp-content/uploads/2020/06/Corgi-Gales-de-Cardigan-paseando.jpg?fit=865%2C540&ssl=1"
     }
 ] 
 
-function imprimirCartas(productos){  
-    var stocks = productos.filter((items)=>{
-        return items.stock 
-        // console.log(items.stock);
-    })
-    var templateHtml = "";
-    if(stocks.stock >= 1){
-        console.log(stocks.stock);
-        stocks.forEach(item =>{
+function imprimirCartas(productos){ 
+    var templateHtml="";
+    productos.map(item =>{
            
-                templateHtml += `
-                    <div class="card" style="width: 20rem; margin: 1rem">
-                        <img src=${item.imagen}>
-                        <div class="card-body">
-                            <h4 class="card-title">${item.nombre}</h5>
-                            <h5 class="card-text">${item.precio}</h2>
+                    templateHtml += `
+                        <div class="card" style="width: 20rem; margin: 1rem">
+                            <img src=${item.imagen}>
+                            <div class="card-body">
+                                <h4 class="card-title">${item.nombre}</h5>
+                                <h5 class="card-text">${item.precio}</h2>
+                                <h6>Stock:${item.stock>1?(item.stock):" agotado"}</h6>
+                            </div>
                         </div>
-                    </div>
-             ` ;  
-             
-             document.querySelector('#card-tienda').innerHTML = templateHtml
-        })
-    }
-    else{
-        stocks.map(item =>{
-                templateHtml += `
-                    <div class="card" style="width: 20rem; margin: 1rem">
-                        <img src=${item.imagen}>
-                        <h3 class="h3-tienda">Stock agotado</h3>
-                        <div class="card-body">
-                            <h4 class="card-title">${item.nombre}</h5>
-                            <h5 class="card-text">${item.precio}</h2>
-                        </div>
-                    </div>
-             ` ; 
-             document.querySelector('#card-tienda').innerHTML = templateHtml
-        })
-    }
+                 ` ;  
+                 
+                 document.querySelector('#card-tienda').innerHTML = templateHtml
+            })
 }
 imprimirCartas(productos)

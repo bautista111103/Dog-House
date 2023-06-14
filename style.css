@@ -2,6 +2,7 @@
     padding:0px;
     margin:0px;
     box-sizing:border-box;
+    font-family: fantasy;
 }
 main{
     width:100%;
@@ -63,8 +64,37 @@ nav{
     width:100%;
     min-height:100%;
     display:flex;
+    flex-wrap:wrap;
     flex-direction:column;
     align-items:center;
+    background-color:black;
+}
+.h1-bienvenida{
+    background-color:yellow;
+    width:100%;
+}
+.div-map-y-video{
+    margin-top:1.5rem;
+    width:100%;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:center;
+    display:flex;
+}
+.mapa{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:40vw;
+}
+.h3-index{
+    color:white;
+}
+.video{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:40vw;
 }
 .img-ala-main{
     display:flex;
@@ -151,6 +181,9 @@ p{
 }
 .container-contacto{
     display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
     padding:2rem;
     width:100%;
 }
@@ -160,7 +193,7 @@ p{
     align-items:start;
     border-right:1px solid black;
     padding:2rem;
-    width:50vw;
+    width:45vw;
     height:100%;
 }
 .div-redes{
@@ -168,7 +201,7 @@ p{
     flex-direction:column;
     align-items:start;
     padding:2rem;
-    width:50vw;
+    width:45vw;
     height:100%;
 }
 .container-novedades{
@@ -227,4 +260,15 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  @media screen and (max-width:750px) {
+    .link-nav{
+        color:white;
+        text-decoration:none;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-around;
+        margin-right:1rem;
+        font-size:10px;
+    }
   }
